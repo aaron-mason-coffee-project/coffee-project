@@ -75,14 +75,27 @@ function renderCoffees(coffees) { // This chooses how to display/ what order the
 
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
-    let selectedRoast = roastSelection.value; // whether it's dark, light, medium etc
+    let selectedRoast = roastSelection.value; // whether the user selected roast is dark, light, medium, this variable stores the dark, light or medium value
     let filteredCoffees = []; // filtered coffees is the new array that will display the user-input values
     coffees.forEach(function(coffee) {
         if (coffee.roast === selectedRoast) {
             filteredCoffees.push(coffee);
+        } else if (selectedRoast === "all"){
+            filteredCoffees = coffees;
         }
+
+        // else {
+        //     filteredCoffees.push(coffees.);
+        // }
     });
     tbody.innerHTML = renderCoffees(filteredCoffees);
+}
+
+// Get user input from a form field
+let formInput = document.getElementById('formInput');
+
+formInput.onkeyup = function (){
+    console.log(formInput.value);
 }
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
@@ -109,6 +122,6 @@ let tbody = document.querySelector('#coffees');
 let submitButton = document.querySelector('#submit');
 let roastSelection = document.querySelector('#roast-selection');
 
-tbody.innerHTML = renderCoffees(coffees);
+let allCoffee = tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);

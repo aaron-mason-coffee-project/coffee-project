@@ -8,7 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
 </head>
 <body>
-    <h1>Coffee!</h1>
+    <h1 id="mainHeader">Coffee!</h1><hr class="col-sm-12 d-none d-sm-block">
 
 <!--    //Update the HTML-->
 <!--    //-->
@@ -24,40 +24,73 @@
 <!--    // Add functionality to update the displayed coffee as the user types into the-->
 <!--    // search box, or as soon as they select an option from the select.-->
 
-    <div id="firstRow" class="d-flex container">
-        <section class="container row col-6"> <!-- Container to put Roast selection on a side of the screen -->
-            <div class="col-6"> <!-- Row 1 -->
-                <form>
-                    <label for="roast-selection"></label>
-                    <select id="roast-selection">
-                        <option>light</option>
-                        <option>medium</option>
-                        <option>dark</option>
-        <!--                <option>All</option>-->
-                    </select>
-                    <input id="submit" type="submit" />
-                </form>
-            </div> <!-- End tag for Row 1 -->
-        </section> <!-- End tag for Container to put Roast selection on a side of the screen -->
-    </div>
+<!--    <div id="firstRow" class="d-flex container">-->
+<!--        <section class="container row col-6"> &lt;!&ndash; Container to put Roast selection on a side of the screen &ndash;&gt;-->
+<!--            <div class="col-6"> &lt;!&ndash; Row 1 &ndash;&gt;-->
+<!--                <form>-->
+<!--                    <label for="roast-selection"></label>-->
+<!--                    <select id="roast-selection">-->
+<!--                        <option>light</option>-->
+<!--                        <option>medium</option>-->
+<!--                        <option>dark</option>-->
+<!--        &lt;!&ndash;                <option>All</option>&ndash;&gt;-->
+<!--                    </select>-->
+<!--                    <input id="submit" type="submit" />-->
+<!--                </form>-->
+<!--            </div> &lt;!&ndash; End tag for Row 1 &ndash;&gt;-->
+<!--        </section> &lt;!&ndash; End tag for Container to put Roast selection on a side of the screen &ndash;&gt;-->
+<!--    </div>-->
 
-<div id="secondRow" class="d-flex container">
-    <section class="container col-6 row"> <!-- Container to put coffees on left side of the screen -->
-            <div class="d-flex"> <!-- Row 2 -->
-            <table>
-                <thead>
-                    <tr>
-        <!-- <th>ID</th>-->
-                        <th>NAME</th>
-                        <th>ROAST</th>
-                    </tr>
-                </thead>
-                <div id="coffees"></div>
-            </table>
-        </div>
+<!--<div id="secondRow" class="d-flex container">-->
+<!--    <section class="container col-6 row"> &lt;!&ndash; Container to put coffees on left side of the screen &ndash;&gt;-->
+<!--            <div class="d-flex"> &lt;!&ndash; Row 2 &ndash;&gt;-->
+<!--            <table>-->
+<!--                <thead>-->
+<!--                    <tr>-->
+<!--        &lt;!&ndash; <th>ID</th>&ndash;&gt;-->
+<!--                        <th>NAME</th>-->
+<!--                        <th>ROAST</th>-->
+<!--                    </tr>-->
+<!--                </thead>-->
+<!--                <div id="coffees"></div>-->
+<!--            </table>-->
+<!--        </div>-->
 
-    </section> <!-- Closing tag for Container to put coffees on left side of the screen -->
-</div>
+<!--    </section> &lt;!&ndash; Closing tag for Container to put coffees on left side of the screen &ndash;&gt;-->
+<!--</div>-->
+
+<!--    <h1>Coffee!</h1>-->
+
+    <form>
+        <label for="roast-selection"></label>
+        <select id="roast-selection">
+            <option>light</option>
+            <option>medium</option>
+            <option>dark</option>
+            <option>all</option>
+        </select>
+        <input id="submit" type="submit" />
+    </form>
+
+    <form>
+        <input type="text" id="formInput">
+        <label for="formInput"></label>
+
+
+    </form>
+
+    <table>
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>NAME</th>
+            <th>ROAST</th>
+        </tr>
+        </thead>
+        <tbody id="coffees"></tbody>
+    </table>
+
+
     <script src="main.js"></script>
     <!-- CSS only -->
 
