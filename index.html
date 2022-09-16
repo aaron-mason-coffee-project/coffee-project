@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <title></title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
 </head>
 <body>
     <h1>Coffee!</h1>
@@ -23,37 +24,45 @@
 <!--    // Add functionality to update the displayed coffee as the user types into the-->
 <!--    // search box, or as soon as they select an option from the select.-->
 
-    <section class="container col-6"> <!-- Container to put Roast selection on a side of the screen -->
-        <div class="row col-6"> <!-- Row 1 -->
-        <form>
-            <label for="roast-selection"></label>
-            <select id="roast-selection">
-                <option>light</option>
-                <option>medium</option>
-                <option>dark</option>
-<!--                <option>All</option>-->
-            </select>
-            <input id="submit" type="submit" />
-        </form>
-        </div> <!-- End tag for Row 1 -->
-    </section> <!-- End tag for Container to put Roast selection on a side of the screen -->
-    <section class="container col-6"> <!-- Container to put coffees on left side of the screen -->
-        <div class="row col-6"> <!-- Row 1 -->
-<!--        <table>-->
-<!--            <thead>-->
-<!--                <tr>-->
-<!--    &lt;!&ndash;                <th>ID</th>&ndash;&gt;-->
-<!--                    <th>NAME</th>-->
-<!--                    <th>ROAST</th>-->
-<!--                </tr>-->
-<!--            </thead>-->
-            <div id="coffees"></div>
+    <div id="firstRow" class="d-flex container">
+        <section class="container row col-6"> <!-- Container to put Roast selection on a side of the screen -->
+            <div class="col-6"> <!-- Row 1 -->
+                <form>
+                    <label for="roast-selection"></label>
+                    <select id="roast-selection">
+                        <option>light</option>
+                        <option>medium</option>
+                        <option>dark</option>
+        <!--                <option>All</option>-->
+                    </select>
+                    <input id="submit" type="submit" />
+                </form>
+            </div> <!-- End tag for Row 1 -->
+        </section> <!-- End tag for Container to put Roast selection on a side of the screen -->
+    </div>
+
+<div id="secondRow" class="d-flex container">
+    <section class="container col-6 row"> <!-- Container to put coffees on left side of the screen -->
+            <div class="d-flex"> <!-- Row 2 -->
+            <table>
+                <thead>
+                    <tr>
+        <!-- <th>ID</th>-->
+                        <th>NAME</th>
+                        <th>ROAST</th>
+                    </tr>
+                </thead>
+                <div id="coffees"></div>
+            </table>
         </div>
-        </table>
+
     </section> <!-- Closing tag for Container to put coffees on left side of the screen -->
-
+</div>
     <script src="main.js"></script>
+    <!-- CSS only -->
 
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
 
 </body>
 </html>
