@@ -23,27 +23,34 @@
 <!--    // Add functionality to update the displayed coffee as the user types into the-->
 <!--    // search box, or as soon as they select an option from the select.-->
 
-    <form>
-        <label for="roast-selection"></label>
-        <select id="roast-selection">
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
-<!--            <option>All</option>-->
-        </select>
-        <input id="submit" type="submit" />
-    </form>
-
-    <table>
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>NAME</th>
-                <th>ROAST</th>
-            </tr>
-        </thead>
-        <tbody id="coffees"></tbody>
-    </table>
+    <section class="container col-6"> <!-- Container to put Roast selection on a side of the screen -->
+        <div class="row col-6"> <!-- Row 1 -->
+        <form>
+            <label for="roast-selection"></label>
+            <select id="roast-selection">
+                <option>light</option>
+                <option>medium</option>
+                <option>dark</option>
+<!--                <option>All</option>-->
+            </select>
+            <input id="submit" type="submit" />
+        </form>
+        </div> <!-- End tag for Row 1 -->
+    </section> <!-- End tag for Container to put Roast selection on a side of the screen -->
+    <section class="container col-6"> <!-- Container to put coffees on left side of the screen -->
+        <div class="row col-6"> <!-- Row 1 -->
+<!--        <table>-->
+<!--            <thead>-->
+<!--                <tr>-->
+<!--    &lt;!&ndash;                <th>ID</th>&ndash;&gt;-->
+<!--                    <th>NAME</th>-->
+<!--                    <th>ROAST</th>-->
+<!--                </tr>-->
+<!--            </thead>-->
+            <div id="coffees"></div>
+        </div>
+        </table>
+    </section> <!-- Closing tag for Container to put coffees on left side of the screen -->
 
     <script src="main.js"></script>
 
