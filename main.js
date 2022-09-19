@@ -59,7 +59,6 @@ function renderCoffees(coffees) { // This chooses how to display/ what order the
     // let displayPref = document.getElementById('coffeeDisplaySection').style.columns;
     for(let i = 0; i < coffees.length; i++) {
         html += renderCoffee(coffees[i]);
-
     }
     return html;
 }
@@ -68,6 +67,7 @@ function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     let selectedRoast = roastSelection.value; // whether the user selected roast is dark, light, medium, this variable stores the dark, light or medium value
     let filteredCoffees = []; // filtered coffees is the new array that will display the user-input values
+    let coffeeDisplaySection = document.getElementById("coffeeDisplaySection");
     coffees.forEach(function(coffee) {
         if (coffee.roast === selectedRoast) {
             filteredCoffees.push(coffee);
@@ -75,10 +75,9 @@ function updateCoffees(e) {
             filteredCoffees = coffees;
         }
 
-
-        // else {
-        //     filteredCoffees.push(coffees.);
-        // }
+    // if (filteredCoffees.length <= 7) {
+    //     coffeeDisplaySection.style.columnRule = "columns-count: 1";
+    // }
 
 
     });
@@ -105,6 +104,42 @@ const search = () => {
             }
         }
     }
+}
+
+// Testing Local Storage Code
+let addRoastSelection = document.querySelector('#roast-selection2');
+let secondInput = document.querySelector('#secondInput');
+let submitButton2 = document.getElementById('submit2');
+
+// function func(e) {
+//     event.preventDefault();
+// }
+
+submitButton2.addEventListener('onclick', addCoffee)
+
+
+// // let coffeeName = document.querySelector('#newCoffee');
+// let roastAdd = document.querySelector('#roast-selection2');
+// let submitButton2 = document.querySelector('#submit2');
+// submitButton2.addEventListener('click', addCoffee);
+//
+// let secondInput = document.getElementById("secondInput");
+//
+function  addCoffee() {
+    let newCoffee = {
+        id: coffees[coffees.length-1].id +1,
+        name: secondInput.value,
+        roast: addRoastSelection.value
+    };
+    coffees.push(newCoffee);
+    let x = [];
+
+    for (let i = 0; i < coffees.length; i++){
+        x = x + coffees[i];
+    }
+    alert(`Your ${newCoffee.name} ${newCoffee.roast} has been added!`)
+    updateCoffees();
+
 }
 
 // function addCoffee(e) {

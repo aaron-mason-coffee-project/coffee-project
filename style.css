@@ -53,3 +53,11 @@ form {
 #coffeeDisplaySection {
     column-count: 2;
 }
+#filterAndRoastDiv>form, hr {
+    /*margin: 0 0 30px 0;*/
+}
+
+div.coffee {
+   margin: 10px;
+   /*display: inline-block;*/
+}

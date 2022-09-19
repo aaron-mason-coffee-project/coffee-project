@@ -42,10 +42,11 @@
                 <form> <!-- Roast selection dropdown options -->
                     <label for="roast-selection">Roast</label><br>
                     <select id="roast-selection" class="stretchDiv">
+                        <option>all</option>
                         <option>light</option>
                         <option>medium</option>
                         <option>dark</option>
-                        <option>all</option>
+
                     </select>
 
                 </form> <!-- /Roast selection dropdown options -->
@@ -69,18 +70,18 @@
                             <option>light</option>
                             <option>medium</option>
                             <option>dark</option>
-                            <option>all</option>
+<!--                            <option>all</option>-->
                         </select>
 
                     </form> <!-- Second Roast selection dropdown options -->
 
                     <form> <!-- Create a new Coffee name to add to list -->
-                        <label for="newCoffee">Coffee Name</label><br>
-                        <input type="text" id="newCoffee" placeholder="Add Coffee" class="stretchDiv">
+                        <label for="secondInput">Coffee Name</label><br>
+                        <input type="text" id="secondInput" placeholder="Add Coffee" class="stretchDiv">
 
 
                     </form> <!-- Create a new Coffee name to add to list -->
-                    <input id="submit2" type="submit" class="stretchDiv buttonStyle">
+                    <input id="submit2" type="submit" class="stretchDiv buttonStyle" onclick="addCoffee()">
                 </div>
             </div>
         </div>
