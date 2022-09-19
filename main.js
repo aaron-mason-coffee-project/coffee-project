@@ -53,10 +53,13 @@ function renderCoffee(coffee) { // Adds divs for every item in coffees variable
     return html;
 }
 
+
 function renderCoffees(coffees) { // This chooses how to display/ what order the coffees will be displayed
     let html = '';
+    // let displayPref = document.getElementById('coffeeDisplaySection').style.columns;
     for(let i = 0; i < coffees.length; i++) {
         html += renderCoffee(coffees[i]);
+
     }
     return html;
 }
@@ -104,6 +107,20 @@ const search = () => {
     }
 }
 
+// function addCoffee(e) {
+//     e.preventDefault();
+//     let newCoffee = {
+//         id : coffees.length + 1,
+//         name : coffeeName,
+//         roast : roastAdd
+//     }
+//     coffees.push(newCoffee)
+// }
+//
+// let coffeeName = document.querySelector('#newCoffee');
+// let roastAdd = document.querySelector('#roast-selection2');
+// let submitButton2 = document.querySelector('#submit2');
+// submitButton2.addEventListener('click', addCoffee);
 
 
 // const addCoffee = (object, id, name, roast) => {

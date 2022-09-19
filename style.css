@@ -49,3 +49,7 @@ form {
 .buttonStyle {
     background-color: deepskyblue;
 }
+
+#coffeeDisplaySection {
+    column-count: 2;
+}
