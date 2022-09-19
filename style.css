@@ -19,4 +19,33 @@ td, th {
 }
 .container {
     display: flex;
+    padding: 0;
+}
+
+form {
+    padding: 0;
+    margin-bottom: 10px;
+}
+#addCoffeeOption {
+    padding-left: 12px;
+}
+
+.stretchDiv {
+    width: 100%;
+}
+#roastSelect {
+    margin: auto;
+    padding-right: 0;
+    font-weight: bold;
+}
+
+
+
+#addCoffeeDiv {
+    padding: 0 12px 0 12px;
+    margin: auto;
+    font-weight: bold;
+}
+.buttonStyle {
+    background-color: deepskyblue;
 }
