@@ -15,18 +15,6 @@
 // search box, or as soon as they select an option from the select.
 
 
-// ############################################ MY CODE ####################
-// function renderCoffee(coffee) {
-//     let html = '<div class="coffee">';
-//     html += '<p>' + coffee.id + '</p>';
-//     html += '<h1>' + coffee.name + '</h1>';
-//     html += '<p>' + coffee.roast + '</p>';
-//     html += '</div>';
-//
-//     return html;
-// }
-
-
 // ################################### ORIGINAL CODE ################################
 //function renderCoffee(coffee) {
 //     var html = '<tr class="coffee">';
@@ -38,22 +26,22 @@
 //     return html;
 // }
 
-                        //let coffees = [
-                        //     {id: 1, name: 'Light City', roast: 'light'},
-                        //     {id: 2, name: 'Half City', roast: 'light'},
-                        //     {id: 3, name: 'Cinnamon', roast: 'light'},
-                        //     {id: 4, name: 'City', roast: 'medium'},
-                        //     {id: 5, name: 'American', roast: 'medium'},
-                        //     {id: 6, name: 'Breakfast', roast: 'medium'},
-                        //     {id: 7, name: 'High', roast: 'dark'},
-                        //     {id: 8, name: 'Continental', roast: 'dark'},
-                        //     {id: 9, name: 'New Orleans', roast: 'dark'},
-                        //     {id: 10, name: 'European', roast: 'dark'},
-                        //     {id: 11, name: 'Espresso', roast: 'dark'},
-                        //     {id: 12, name: 'Viennese', roast: 'dark'},
-                        //     {id: 13, name: 'Italian', roast: 'dark'},
-                        //     {id: 14, name: 'French', roast: 'dark'},
-                        // ];
+//let coffees = [
+//     {id: 1, name: 'Light City', roast: 'light'},
+//     {id: 2, name: 'Half City', roast: 'light'},
+//     {id: 3, name: 'Cinnamon', roast: 'light'},
+//     {id: 4, name: 'City', roast: 'medium'},
+//     {id: 5, name: 'American', roast: 'medium'},
+//     {id: 6, name: 'Breakfast', roast: 'medium'},
+//     {id: 7, name: 'High', roast: 'dark'},
+//     {id: 8, name: 'Continental', roast: 'dark'},
+//     {id: 9, name: 'New Orleans', roast: 'dark'},
+//     {id: 10, name: 'European', roast: 'dark'},
+//     {id: 11, name: 'Espresso', roast: 'dark'},
+//     {id: 12, name: 'Viennese', roast: 'dark'},
+//     {id: 13, name: 'Italian', roast: 'dark'},
+//     {id: 14, name: 'French', roast: 'dark'},
+// ];
 
 function renderCoffee(coffee) { // Adds divs for every item in coffees variable
     let html = '<div class="coffee">';
@@ -65,10 +53,13 @@ function renderCoffee(coffee) { // Adds divs for every item in coffees variable
     return html;
 }
 
+
 function renderCoffees(coffees) { // This chooses how to display/ what order the coffees will be displayed
     let html = '';
+    // let displayPref = document.getElementById('coffeeDisplaySection').style.columns;
     for(let i = 0; i < coffees.length; i++) {
         html += renderCoffee(coffees[i]);
+
     }
     return html;
 }
@@ -116,9 +107,25 @@ const search = () => {
     }
 }
 
-const addCoffee = () => {
+// function addCoffee(e) {
+//     e.preventDefault();
+//     let newCoffee = {
+//         id : coffees.length + 1,
+//         name : coffeeName,
+//         roast : roastAdd
+//     }
+//     coffees.push(newCoffee)
+// }
+//
+// let coffeeName = document.querySelector('#newCoffee');
+// let roastAdd = document.querySelector('#roast-selection2');
+// let submitButton2 = document.querySelector('#submit2');
+// submitButton2.addEventListener('click', addCoffee);
 
-}
+
+// const addCoffee = (object, id, name, roast) => {
+//
+// }
 
 // function myFunction() {
 //     let input, filter, tbody, divId, a, i, txtValue;
@@ -175,4 +182,3 @@ let allCoffee = tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
 roastSelection.addEventListener('change', updateCoffees);
-
