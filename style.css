@@ -1,3 +1,16 @@
+:root {
+    --submit-bar: #5187C6
+
+
+
+}
+
+body{
+    background-image: url("img/coffebackground.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 #mainHeader {
     display: flex;
     justify-content: center;
@@ -37,6 +50,7 @@ form {
     margin: auto;
     padding-right: 0;
     font-weight: bold;
+    border-radius: inherit;
 }
 
 
@@ -47,9 +61,14 @@ form {
     font-weight: bold;
 }
 .buttonStyle {
-    background-color: deepskyblue;
+    background-color: var(--submit-bar);
+    color: #ffff;
 }
 
 #coffeeDisplaySection {
     column-count: 2;
+}
+
+#forminput{
+
 }
