@@ -58,7 +58,7 @@
 function renderCoffee(coffee) { // Adds divs for every item in coffees variable
     let html = '<div class="coffee">';
     // html += '<p>' + coffee.id + '</p>';
-    html += '<h1>' + coffee.name + '</h1>';
+    html += '<h2>' + coffee.name + '</h2>';
     html += '<p>' + coffee.roast + '</p>';
     html += '</div>';
 
@@ -84,19 +84,67 @@ function updateCoffees(e) {
             filteredCoffees = coffees;
         }
 
+
         // else {
         //     filteredCoffees.push(coffees.);
         // }
+
+
     });
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
 
+
+const search = () => {
+    const searchBox = document.getElementById("formInput").value.toUpperCase();
+    // const coffeesTbody = document.getElementById("coffees");
+    const coffee = document.querySelectorAll(".coffee");
+    const coffeeName = document.getElementsByTagName("h2");
+
+    for(let i = 0; i < coffeeName.length; i++) {
+        let match = coffee[i].getElementsByTagName('h2')[0];
+
+        if(match){
+            let textValue = match.textContent || match.innerHTML
+
+            if(textValue.toUpperCase().indexOf(searchBox) > -1 ) {
+                coffee[i].style.display = "";
+            }else {
+                coffee[i].style.display = "none";
+            }
+        }
+    }
+}
+
+const addCoffee = () => {
+
+}
+
+// function myFunction() {
+//     let input, filter, tbody, divId, a, i, txtValue;
+//     input = document.getElementById("formInput");
+//     filter = input.value.toUpperCase();
+//     tbody = document.getElementById("coffees");
+//     divId = tbody.getElementsByClassName("coffee");
+//     for (i = 0; i < divId.length; i++) {
+//         a = divId[i].getElementsByTagName("a")[0];
+//         txtValue = a.textContent || a.innerText;
+//         if (txtValue.toUpperCase().indexOf(filter) > -1) {
+//             divId[i].style.display = "";
+//         } else {
+//             divId[i].style.display = "none";
+//         }
+//     }
+// }
+
+
+
 // Get user input from a form field
 let formInput = document.getElementById('formInput');
 
-formInput.onkeyup = function (){
-    console.log(formInput.value);
-}
+// let userTyping = formInput.onkeyup = function (){
+//     updateCoffees(formInput.value);
+// }
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 let coffees = [
@@ -118,6 +166,7 @@ let coffees = [
 
 
 
+
 let tbody = document.querySelector('#coffees');
 let submitButton = document.querySelector('#submit');
 let roastSelection = document.querySelector('#roast-selection');
@@ -125,3 +174,5 @@ let roastSelection = document.querySelector('#roast-selection');
 let allCoffee = tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
+roastSelection.addEventListener('change', updateCoffees);
+

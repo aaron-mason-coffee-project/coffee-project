@@ -8,60 +8,13 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
 </head>
 <body>
+
+<!-- Coffee header -->
     <h1 id="mainHeader">Coffee!</h1><hr class="col-sm-12 d-none d-sm-block">
+<!-- Coffee header -->
 
-<!--    //Update the HTML-->
-<!--    //-->
-<!--    // Tables are a little old school, you need to refactor the code so that each coffee is displayed-->
-<!--    // in a div that contains a heading displaying the coffee name, and the type of roast in a paragraph.-->
-<!--    // Don't display the ids, these are only for our application's internal use-->
-<!--    //-->
-<!--    // When the page loads, the coffees should be sorted by their ids in ascending order-->
-<!--    //-->
-<!--    // Add functionality to search through the coffees by name,-->
-<!--    // and display only the coffees that match the provided search term (You will need to add an input field to the existing form for this)-->
-<!--    //-->
-<!--    // Add functionality to update the displayed coffee as the user types into the-->
-<!--    // search box, or as soon as they select an option from the select.-->
 
-<!--    <div id="firstRow" class="d-flex container">-->
-<!--        <section class="container row col-6"> &lt;!&ndash; Container to put Roast selection on a side of the screen &ndash;&gt;-->
-<!--            <div class="col-6"> &lt;!&ndash; Row 1 &ndash;&gt;-->
-<!--                <form>-->
-<!--                    <label for="roast-selection"></label>-->
-<!--                    <select id="roast-selection">-->
-<!--                        <option>light</option>-->
-<!--                        <option>medium</option>-->
-<!--                        <option>dark</option>-->
-<!--        &lt;!&ndash;                <option>All</option>&ndash;&gt;-->
-<!--                    </select>-->
-<!--                    <input id="submit" type="submit" />-->
-<!--                </form>-->
-<!--            </div> &lt;!&ndash; End tag for Row 1 &ndash;&gt;-->
-<!--        </section> &lt;!&ndash; End tag for Container to put Roast selection on a side of the screen &ndash;&gt;-->
-<!--    </div>-->
-
-<!--<div id="secondRow" class="d-flex container">-->
-<!--    <section class="container col-6 row"> &lt;!&ndash; Container to put coffees on left side of the screen &ndash;&gt;-->
-<!--            <div class="d-flex"> &lt;!&ndash; Row 2 &ndash;&gt;-->
-<!--            <table>-->
-<!--                <thead>-->
-<!--                    <tr>-->
-<!--        &lt;!&ndash; <th>ID</th>&ndash;&gt;-->
-<!--                        <th>NAME</th>-->
-<!--                        <th>ROAST</th>-->
-<!--                    </tr>-->
-<!--                </thead>-->
-<!--                <div id="coffees"></div>-->
-<!--            </table>-->
-<!--        </div>-->
-
-<!--    </section> &lt;!&ndash; Closing tag for Container to put coffees on left side of the screen &ndash;&gt;-->
-<!--</div>-->
-
-<!--    <h1>Coffee!</h1>-->
-
-    <form>
+    <form> <!-- Roast selection dropdown options -->
         <label for="roast-selection"></label>
         <select id="roast-selection">
             <option>light</option>
@@ -69,17 +22,33 @@
             <option>dark</option>
             <option>all</option>
         </select>
-        <input id="submit" type="submit" />
-    </form>
+        <input id="submit" type="submit" >
+    </form> <!-- Roast selection dropdown options -->
 
-    <form>
-        <input type="text" id="formInput">
+    <form> <!-- Filter by Coffee name -->
+        <input type="text" id="formInput" placeholder="Search Coffee" onkeyup="search()">
         <label for="formInput"></label>
+    </form>  <!-- Filter by Coffee name -->
 
+    <form> <!-- Second Roast selection dropdown options -->
+        <label for="roast-selection2"></label>
+        <select id="roast-selection2">
+            <option>light</option>
+            <option>medium</option>
+            <option>dark</option>
+            <option>all</option>
+        </select>
+        <input id="submit2" type="submit" >
+    </form> <!-- Second Roast selection dropdown options -->
 
-    </form>
+    <form> <!-- Create a new Coffee name to add to list -->
 
-    <table>
+        <input type="text" id="newCoffee" placeholder="Add Coffee">
+        <label for="newCoffee"></label>
+
+    </form> <!-- Create a new Coffee name to add to list -->
+
+    <table> <!-- Coffee name/roast display (main display text) -->
         <thead>
         <tr>
             <th>ID</th>
@@ -88,14 +57,15 @@
         </tr>
         </thead>
         <tbody id="coffees"></tbody>
-    </table>
+    </table>  <!-- Coffee name/roast display (main display text) -->
 
-
+<!-- Script tags. Leave alone -->
     <script src="main.js"></script>
     <!-- CSS only -->
 
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    <!-- Script tags. Leave alone -->
 
 </body>
 </html>
