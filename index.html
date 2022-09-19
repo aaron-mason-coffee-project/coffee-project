@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,32 +7,127 @@
     <meta charset="UTF-8">
     <title></title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
 </head>
 <body>
-    <h1>Coffee!</h1>
 
-    <form>
-        <label for="roast-selection"></label>
-        <select id="roast-selection">
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
-            <option>all</option>
-        </select>
-        <input id="submit" type="submit" />
-    </form>
+<!-- Coffee header -->
+<h1 id="mainHeader">Coffee!</h1><hr class="col-sm-12 d-none d-sm-block">
+<!-- Coffee header -->
 
-    <table>
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>NAME</th>
-                <th>ROAST</th>
-            </tr>
-        </thead>
-        <tbody id="coffees"></tbody>
-    </table>
+<!--<section>-->
+<!--    <div class="container">-->
+<!--        -->
+<!--    </div>-->
+<!--</section>-->
+<div id="allPage" class="allPage row">
+    <section id="coffeeDisplaySection" class="col-6" style="column-count: 2"> <!-- Coffee Display Section (tbody) -->
+        <div class="container">
+            <table> <!-- Coffee name & roast display (main display text) -->
+                <!--                <thead>-->
+                <!--                <tr>-->
+                <!--                    <th>ID</th>-->
+                <!--                    <th>NAME</th>-->
+                <!--                    <th>ROAST</th>-->
+                <!--                </tr>-->
+                <!--                </thead>-->
+                <tbody id="coffees"></tbody>
+            </table>  <!-- /Coffee name & roast display (main display text) -->
+        </div>
+    </section>  <!-- /Coffee Display Section (tbody) -->
 
-    <script src="main.js"></script>
+    <section id="roastFilterInputAddCoffeeSection" class=" col-6"><!-- Roast selection dropdown options && Filter by Coffee name text box -->
+        <div id="roastSelect" class="container row">
+            <div id="filterAndRoastDiv">
+                <form> <!-- Roast selection dropdown options -->
+                    <label for="roast-selection">Roast</label><br>
+                    <select id="roast-selection" class="stretchDiv">
+                        <option>all</option>
+                        <option>light</option>
+                        <option>medium</option>
+                        <option>dark</option>
+
+                    </select>
+
+                </form> <!-- /Roast selection dropdown options -->
+
+                <form> <!-- Filter by Coffee name -->
+                    <label for="formInput">Coffee Name</label><br>
+                    <input type="text" id="formInput" placeholder="Search Coffee" onkeyup="search()" class="stretchDiv">
+
+                </form>  <!-- /Filter by Coffee name -->
+                <input id="submit" type="submit" class="stretchDiv buttonStyle">
+                <hr>
+            </div>
+        </div>
+        <div id="addCoffeeOption">
+            <div id="addCoffeeDiv">
+                <h2 class="d-flex justify-content-center">Add a Coffee</h2>
+                <div id="createRoastAndText">
+                    <form> <!-- Second Roast selection dropdown options -->
+                        <label for="roast-selection2">Roast</label><br>
+                        <select id="roast-selection2" class="stretchDiv">
+                            <option>light</option>
+                            <option>medium</option>
+                            <option>dark</option>
+                            <!--                            <option>all</option>-->
+                        </select>
+
+                    </form> <!-- Second Roast selection dropdown options -->
+
+                    <form> <!-- Create a new Coffee name to add to list -->
+                        <label for="secondInput">Coffee Name</label><br>
+                        <input type="text" id="secondInput" placeholder="Add Coffee" class="stretchDiv">
+
+
+                    </form> <!-- Create a new Coffee name to add to list -->
+                    <input id="submit2" type="submit" class="stretchDiv buttonStyle" onclick="addCoffee()">
+                </div>
+            </div>
+        </div>
+    </section> <!-- /Roast selection dropdown options && Filter by Coffee name text box -->
+
+
+
+
+
+    <!--        <form> &lt;!&ndash; Second Roast selection dropdown options &ndash;&gt;-->
+    <!--            <label for="roast-selection2"></label>-->
+    <!--            <select id="roast-selection2">-->
+    <!--                <option>light</option>-->
+    <!--                <option>medium</option>-->
+    <!--                <option>dark</option>-->
+    <!--                <option>all</option>-->
+    <!--            </select>-->
+    <!--            <input id="submit2" type="submit" >-->
+    <!--        </form> &lt;!&ndash; Second Roast selection dropdown options &ndash;&gt;-->
+
+    <!--        <form> &lt;!&ndash; Create a new Coffee name to add to list &ndash;&gt;-->
+
+    <!--            <input type="text" id="newCoffee" placeholder="Add Coffee">-->
+    <!--            <label for="newCoffee"></label>-->
+
+    <!--        </form> &lt;!&ndash; Create a new Coffee name to add to list &ndash;&gt;-->
+
+</div>
+<!--<table> &lt;!&ndash; Coffee name/roast display (main display text) &ndash;&gt;-->
+<!--    <thead>-->
+<!--    <tr>-->
+<!--        <th>ID</th>-->
+<!--        <th>NAME</th>-->
+<!--        <th>ROAST</th>-->
+<!--    </tr>-->
+<!--    </thead>-->
+<!--    <tbody id="coffees"></tbody>-->
+<!--</table>  &lt;!&ndash; Coffee name/roast display (main display text) &ndash;&gt;-->
+
+<!-- Script tags. Leave alone -->
+<script src="main.js"></script>
+<!-- CSS only -->
+
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+<!-- Script tags. Leave alone -->
+
 </body>
 </html>
