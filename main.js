@@ -131,7 +131,8 @@ function  addCoffee() {
     let newCoffee = {
         id: coffees[coffees.length-1].id +1,
         name: secondInput.value,
-        roast: addRoastSelection.value
+        roast: addRoastSelection.value,
+        img: '<img src="img/coffeeicon.png">'
     };
     coffees.push(newCoffee);
     let x = [];
