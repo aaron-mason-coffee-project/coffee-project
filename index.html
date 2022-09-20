@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,9 +9,14 @@
 </head>
 <body>
 
-
 <!-- Coffee header -->
-<h1 id="mainHeader">Coffee!</h1><hr class="col-sm-12 d-none d-sm-block">
+<!--<h1 id="mainHeader">Coffee!</h1><hr class="col-sm-12 d-none d-sm-block">-->
+<div class="d-flex justify-content-center headerImage">
+<img src="img/coffee-logo.png">
+</div>
+
+<hr class="col-sm-12 d-none d-sm-block">
+
 <!-- Coffee header -->
 
 <!--<section>-->
@@ -25,13 +28,13 @@
     <section id="coffeeDisplaySection" class="col-6" style="column-count: 2"> <!-- Coffee Display Section (tbody) -->
         <div class="container">
             <table> <!-- Coffee name & roast display (main display text) -->
-<!--                <thead>-->
-<!--                <tr>-->
-<!--                    <th>ID</th>-->
-<!--                    <th>NAME</th>-->
-<!--                    <th>ROAST</th>-->
-<!--                </tr>-->
-<!--                </thead>-->
+                <!--                <thead>-->
+                <!--                <tr>-->
+                <!--                    <th>ID</th>-->
+                <!--                    <th>NAME</th>-->
+                <!--                    <th>ROAST</th>-->
+                <!--                </tr>-->
+                <!--                </thead>-->
                 <tbody id="coffees"></tbody>
             </table>  <!-- /Coffee name & roast display (main display text) -->
         </div>
@@ -43,26 +46,27 @@
                 <form> <!-- Roast selection dropdown options -->
                     <label for="roast-selection">Roast</label><br>
                     <select id="roast-selection" class="stretchDiv py-2">
+                        <option>all</option>
                         <option>light</option>
                         <option>medium</option>
                         <option>dark</option>
-                        <option>all</option>
+
                     </select>
 
                 </form> <!-- /Roast selection dropdown options -->
 
                 <form> <!-- Filter by Coffee name -->
                     <label for="formInput">Coffee Name</label><br>
-                    <input type="text" id="formInput" placeholder="Search Coffee" onkeyup="search()" class="stretchDiv py-1">
+                    <input type="text" id="formInput" placeholder="Search Coffee" onkeyup="search()" class="stretchDiv">
 
                 </form>  <!-- /Filter by Coffee name -->
-                <input id="submit" type="submit" class="stretchDiv buttonStyle">
+                <input id="submit" type="submit" class="stretchDiv buttonStyle py-1">
                 <hr>
             </div>
         </div>
         <div id="addCoffeeOption">
             <div id="addCoffeeDiv">
-            <h2 class="d-flex justify-content-center">Add a Coffee</h2>
+                <h2 class="d-flex justify-content-center">Add a Coffee</h2>
                 <div id="createRoastAndText">
                     <form> <!-- Second Roast selection dropdown options -->
                         <label for="roast-selection2">Roast</label><br>
@@ -70,18 +74,18 @@
                             <option>light</option>
                             <option>medium</option>
                             <option>dark</option>
-                            <option>all</option>
+                            <!--                            <option>all</option>-->
                         </select>
 
                     </form> <!-- Second Roast selection dropdown options -->
 
                     <form> <!-- Create a new Coffee name to add to list -->
-                        <label for="newCoffee">Coffee Name</label><br>
-                        <input type="text" id="newCoffee" placeholder="Add Coffee" class="stretchDiv py-1">
+                        <label for="secondInput">Coffee Name</label><br>
+                        <input type="text" id="secondInput" placeholder="Add Coffee" class="stretchDiv py-1">
 
 
                     </form> <!-- Create a new Coffee name to add to list -->
-                    <input id="submit2" type="submit" class="stretchDiv buttonStyle">
+                    <input id="submit2" type="submit" class="stretchDiv buttonStyle py-1" onclick="addCoffee()">
                 </div>
             </div>
         </div>
@@ -91,23 +95,23 @@
 
 
 
-<!--        <form> &lt;!&ndash; Second Roast selection dropdown options &ndash;&gt;-->
-<!--            <label for="roast-selection2"></label>-->
-<!--            <select id="roast-selection2">-->
-<!--                <option>light</option>-->
-<!--                <option>medium</option>-->
-<!--                <option>dark</option>-->
-<!--                <option>all</option>-->
-<!--            </select>-->
-<!--            <input id="submit2" type="submit" >-->
-<!--        </form> &lt;!&ndash; Second Roast selection dropdown options &ndash;&gt;-->
+    <!--        <form> &lt;!&ndash; Second Roast selection dropdown options &ndash;&gt;-->
+    <!--            <label for="roast-selection2"></label>-->
+    <!--            <select id="roast-selection2">-->
+    <!--                <option>light</option>-->
+    <!--                <option>medium</option>-->
+    <!--                <option>dark</option>-->
+    <!--                <option>all</option>-->
+    <!--            </select>-->
+    <!--            <input id="submit2" type="submit" >-->
+    <!--        </form> &lt;!&ndash; Second Roast selection dropdown options &ndash;&gt;-->
 
-<!--        <form> &lt;!&ndash; Create a new Coffee name to add to list &ndash;&gt;-->
+    <!--        <form> &lt;!&ndash; Create a new Coffee name to add to list &ndash;&gt;-->
 
-<!--            <input type="text" id="newCoffee" placeholder="Add Coffee">-->
-<!--            <label for="newCoffee"></label>-->
+    <!--            <input type="text" id="newCoffee" placeholder="Add Coffee">-->
+    <!--            <label for="newCoffee"></label>-->
 
-<!--        </form> &lt;!&ndash; Create a new Coffee name to add to list &ndash;&gt;-->
+    <!--        </form> &lt;!&ndash; Create a new Coffee name to add to list &ndash;&gt;-->
 
 </div>
 <!--<table> &lt;!&ndash; Coffee name/roast display (main display text) &ndash;&gt;-->

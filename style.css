@@ -1,12 +1,18 @@
 :root {
-    --submit-bar: #5187C6
+    --submit-bar: #492D1C
 
 
 
 }
 
-img{
-    background-image: url("img/coffebackground.jpg");
+#coffeeDisplaySection {
+    /*overflow: scroll;*/
+    /*height: 130vh;*/
+    /*overflow: hidden;*/
+}
+
+body{
+    background-image: url("img/coffee-background.png");
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -63,12 +69,30 @@ form {
 .buttonStyle {
     background-color: var(--submit-bar);
     color: #ffff;
+    border-radius: 15px;
 }
 
 #coffeeDisplaySection {
     column-count: 2;
 }
 
-#forminput{
 
+
+
+#filterAndRoastDiv>form, hr {
+    /*margin: 0 0 30px 0;*/
+}
+
+div.coffee {
+   margin: 10px;
+   /*display: inline-block;*/
+
+}
+
+.headerImage{
+    margin: 35px;
+}
+
+#formInput, #roast-selection, #roast-selection2, #secondInput {
+    border-radius: 15px;
 }
